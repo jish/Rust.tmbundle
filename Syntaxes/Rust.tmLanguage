@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(if|while|for|return)\b</string>
+			<string>\b(if|while|for|return|fn)\b</string>
 			<key>name</key>
 			<string>keyword.control.rust</string>
 		</dict>
