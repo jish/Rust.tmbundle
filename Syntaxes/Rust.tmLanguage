@@ -33,6 +33,12 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(true|false)\b</string>
+			<key>name</key>
+			<string>constant.language.rust</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.rust</string>
