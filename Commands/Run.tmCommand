@@ -5,9 +5,12 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU
+	<string>#!/usr/bin/env ruby -U
 
-system("rust", "run", ENV["TM_FILEPATH"])
+require "#{ENV["TM_SUPPORT_PATH"]}/lib/tm/executor"
+
+TextMate::Executor.run "rustc", ENV["TM_FILEPATH"]
+TextMate::Executor.run ENV["TM_FILEPATH"].sub(/.rs$/, ""), :use_hashbang =&gt; false
 </string>
 	<key>input</key>
 	<string>document</string>
