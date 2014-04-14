@@ -9,8 +9,11 @@
 
 require "#{ENV["TM_SUPPORT_PATH"]}/lib/tm/executor"
 
-TextMate::Executor.run "rustc", ENV["TM_FILEPATH"]
-TextMate::Executor.run ENV["TM_FILEPATH"].sub(/.rs$/, ""), :use_hashbang =&gt; false
+retval = TextMate::Executor.run "rustc", ENV["TM_FILEPATH"]
+
+if $?.success?
+  TextMate::Executor.run ENV["TM_FILEPATH"].sub(/.rs$/, ""), :use_hashbang =&gt; false
+end
 </string>
 	<key>input</key>
 	<string>document</string>
