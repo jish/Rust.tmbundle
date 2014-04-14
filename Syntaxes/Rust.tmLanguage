@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(if|while|for|return|fn|int|bool)\b</string>
+			<string>\b(if|while|for|return|int|bool)\b</string>
 			<key>name</key>
 			<string>keyword.control.rust</string>
 		</dict>
@@ -44,6 +44,41 @@
 			<string>==</string>
 			<key>name</key>
 			<string>keyword.operator.comparison.rust</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\b(use)\b</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.special-method.rust</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>;</string>
+			<key>name</key>
+			<string>meta.use.rust</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.fn.rust</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.rust</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(fn)\s+([a-zA-Z_]*)\(\)</string>
+			<key>name</key>
+			<string>meta.function.method.without-arguments.rust</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
