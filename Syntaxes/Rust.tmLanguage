@@ -76,7 +76,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(fn)\s+([a-zA-Z_]*)\(\)</string>
+			<string>(fn)\s+([a-zA-Z_]*)\(</string>
 			<key>name</key>
 			<string>meta.function.method.without-arguments.rust</string>
 		</dict>
